@@ -1,0 +1,136 @@
+.colores {
+  background: hsl(180, 52%, 96%);
+  background: rgb(41, 171, 138) (Filter Tablets);
+  background: hsl(180, 31%, 95%);
+  background: hsl(180, 8%, 52%);
+  background: hsl(180, 14%, 20%);
+  background: hsl(180, 29%, 50%);
+}
+
+body {
+  margin: 0;
+  background-color: hsl(180, 52%, 96%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+}
+.boxduo {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.line1 {
+  color: hsl(180, 29%, 50%);
+  font-family: "League Spartan", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.imgheader {
+  width: 100vw;
+  height: 90px;
+  margin-bottom: 30px;
+}
+
+.filter{
+  background-color: rgb(255, 255, 255);
+  width: 78vw;
+  height: 60px;
+  box-shadow: 0px 10px 10px #9dd9c5;
+  border-radius: 5px;
+  z-index: 10;
+  position: absolute;
+  top: 7vh;
+  display: none;
+  padding-left:15px;
+
+}
+.divfilter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 75vw;
+  height: 70px;
+  align-items: center;
+  padding: 25px;
+  box-shadow: 0px 10px 10px #9dd9c5;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+.box1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: column;
+}
+.p {
+  background-color: hsl(180, 71%, 93%);
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.line3 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: hsl(180, 8%, 52%);
+  font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+}
+.line2 {
+  color: hsl(180, 14%, 20%);
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.box3 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: hsl(180, 29%, 50%);
+  font-family: "League Spartan", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.filtertag{
+    background-color: hsl(180, 71%, 93%) ;
+    color:hsl(180, 29%, 50%) ;
+    padding: 5px;
+   font-size: 15px;
+   border-top-left-radius: 5px;
+}
+.delete{background-color: rgb(41, 171, 138);
+    padding: 5px;
+    font-size: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;   
+    height: 17px;
+    width: 17px;}
+
+
