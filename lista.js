@@ -20,11 +20,14 @@ const info = dataJson
      </div>
      </div>
      <div class="box3">
-     <p id="${el.role}" class="p btn">${el.role}</p><p id="${el.level}" class="p btn">${el.level}</p> <p>${el.languages
-      .map(el => {
-        return `<p id="${el}" class="p btn" >${el}</p>`;
-      })
-      .join(' ')}</p></div>
+     <p id="${el.role}" class="p btn">${el.role}</p>
+     <p id="${el.level}" class="p btn">${el.level}</p> 
+     ${el.languages
+       .map(el => {
+         return `<p id="${el}" class="p btn" >${el}</p>`;
+       })
+       .join(' ')}
+      </div>
      </div>
      <div> </div>
     
