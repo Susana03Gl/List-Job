@@ -1,4 +1,4 @@
-import dataJson from '/data.json' assert { type: 'json' };
+import dataJson from './data.json' assert { type: 'json' };
 const Contlist = document.querySelector('.contlist'),
   filter = document.querySelector('.filter');
 
