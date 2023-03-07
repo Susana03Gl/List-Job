@@ -41,7 +41,7 @@ const info = dataJson
   .join('');
 Contlist.innerHTML = info;
 
-Contlist.addEventListener('click', e => {
+document.addEventListener('click', e => {
   if (e.target.classList[1] == 'btn') {
     filter.classList.add('flex');
     filterList.push(e.target.textContent);
@@ -53,9 +53,18 @@ Contlist.addEventListener('click', e => {
           <p class="filtertag">${filter}</p>
           <div class="delete"></div>
         </div>
-        `;
+        ` 
       })
       .join('');
-    filter.innerHTML = filtersItems;
+      filter.innerHTML = filtersItems;
+    
+    
+
+    
   }
+    
+
+
 });
+
+

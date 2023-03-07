@@ -91,6 +91,7 @@ body {
   font-size: 15px;
   border-radius: 5px;
   cursor: pointer;
+  border-bottom: none;
 }
 
 .line3 {
