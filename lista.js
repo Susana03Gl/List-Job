@@ -54,7 +54,7 @@ const filterData = filters => {
   return res;
 };
 
-document.addEventListener('click', e => {
+Contlist.addEventListener('click', e => {
   if (e.target.classList[1] == 'btn') {
     filter.classList.add('flex');
     filterList.push(e.target.textContent);
@@ -66,12 +66,13 @@ document.addEventListener('click', e => {
           <p class="filtertag">${filter}</p>
           <div class="delete"></div>
         </div>
-        ` 
+        `;
       })
       .join('');
     filter.innerHTML = filtersItems;
+    const addingFilters = filterData(removeDuplications(filterList));
+    showData(addingFilters);
   }
-    
-
-
 });
+
+showData();
