@@ -6,9 +6,11 @@ const Contlist = document.querySelector('.contlist'),
   removeDuplications = array => [...new Set(array)]; //Este codigo remueve las duplicaciones en el array
 
 console.log(dataJson);
-const info = dataJson
-  .map(el => {
-    return `
+
+const showData = (data = dataJson) => {
+  const info = data
+    .map(el => {
+      return `
     <div class="box">
       <div class="boxduo">
         <div class="box1">
@@ -30,16 +32,27 @@ const info = dataJson
         <button id="${el.role}" class="p btn">${el.role}</button>
         <button id="${el.level}" class="p btn">${el.level}</button>
         ${el.languages
-          .map(el => {
+          ?.map(el => {
             return `<button id="${el}" class="p btn">${el}</button>`;
           })
           .join(' ')}
       </div>
     </div>    
     `;
-  })
-  .join('');
-Contlist.innerHTML = info;
+    })
+    .join('');
+  Contlist.innerHTML = info;
+};
+
+const filterData = filters => {
+  const languages = ({ languages }) => languages.some(item => filters.includes(item));
+  const positions = ({ role }) => filters.includes(role);
+  const levels = ({ level }) => filters.includes(level);
+
+  const res = dataJson.filter(item => languages(item) || positions(item) || levels(item));
+  console.log(res);
+  return res;
+};
 
 Contlist.addEventListener('click', e => {
   if (e.target.classList[1] == 'btn') {
@@ -57,5 +70,10 @@ Contlist.addEventListener('click', e => {
       })
       .join('');
     filter.innerHTML = filtersItems;
+
+    const addingFilters = filterData(removeDuplications(filterList));
+    showData(addingFilters);
   }
 });
+
+showData();
